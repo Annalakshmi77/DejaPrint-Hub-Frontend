@@ -58,7 +58,7 @@ function ForgotPassword() {
         </Link>
 
         <div style={{ background: 'var(--auth-card-bg)', border: '1px solid var(--auth-card-border)', borderRadius: '12px', padding: '2rem', backdropFilter: 'blur(12px)', textAlign: 'center' }}>
-          <div style={{ mx: 'auto', marginBottom: '1.5rem', display: 'inline-flex', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(45,138,158,0.1)', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ marginLeft: 'auto', marginRight: 'auto', marginBottom: '1.5rem', display: 'inline-flex', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(45,138,158,0.1)', alignItems: 'center', justifyContent: 'center' }}>
             <Mail size={32} style={{ color: 'var(--gold)' }} />
           </div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Check Your Email</h1>

@@ -107,6 +107,7 @@ const ProductCard = ({ product, onView }: { product: any; onView: (p: any) => vo
 
 
 export default function CustomerDesigns() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');

@@ -113,9 +113,6 @@ class ApiService {
     return this.api.delete(`/orders/${id}`);
   }
 
-  async deleteOrder(id: string) {
-    return this.api.delete(`/orders/${id}`);
-  }
 
   // File upload
   async uploadDesign(file: File, orderId?: string) {

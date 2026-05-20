@@ -266,7 +266,7 @@ export default function AdminProducts() {
     const filtered = products.filter(
       product =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         product.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredProducts(filtered);
