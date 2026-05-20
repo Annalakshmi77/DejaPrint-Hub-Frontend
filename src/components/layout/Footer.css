@@ -1,0 +1,410 @@
+/* ================================================
+   PRINTCRAFT FOOTER — Premium Dark Studio Style
+   ================================================ */
+
+.site-footer {
+  position: relative;
+  z-index: 10;
+  background: #08192e;
+  font-family: 'Outfit', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Top decorative line with gradient */
+.footer-rule {
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(45, 138, 158, 0.4) 20%,
+      rgba(92, 189, 185, 0.7) 50%,
+      rgba(45, 138, 158, 0.4) 80%,
+      transparent 100%);
+}
+
+/* ——— MAIN BODY ——— */
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1.6fr;
+  gap: 3rem;
+  padding: 4rem 6vw 3.5rem;
+  align-items: start;
+}
+
+/* ——— COLUMN BASE ——— */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ——— REVEAL ANIMATION ——— */
+.footer-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+/* 'visible' is added by BOTH Home.tsx observer AND Footer's own observer */
+.footer-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ——— BRAND COLUMN ——— */
+.footer-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #f0f6f8;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+
+.footer-logo span {
+  color: #2d8a9e;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #7aadba;
+  max-width: 240px;
+  margin-bottom: 1.8rem;
+}
+
+/* ——— SOCIAL ICONS ——— */
+.footer-socials {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(45, 138, 158, 0.25);
+  color: #7aadba;
+  background: rgba(45, 138, 158, 0.06);
+  transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.footer-social-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-social-link:hover {
+  color: #5cbdb9;
+  border-color: rgba(92, 189, 185, 0.55);
+  background: rgba(92, 189, 185, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ——— NAV COLUMNS ——— */
+.footer-col-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2d8a9e;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(45, 138, 158, 0.18);
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-nav-list li a {
+  font-size: 0.87rem;
+  color: #7aadba;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s, gap 0.2s;
+  position: relative;
+}
+
+.footer-nav-list li a::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background: #5cbdb9;
+  transition: width 0.25s ease;
+  flex-shrink: 0;
+}
+
+.footer-nav-list li a:hover {
+  color: #e0f4f5;
+  gap: 0.7rem;
+}
+
+.footer-nav-list li a:hover::before {
+  width: 10px;
+}
+
+/* ——— NEWSLETTER COLUMN ——— */
+.footer-newsletter-desc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #7aadba;
+  margin-bottom: 1.1rem;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-newsletter-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: rgba(45, 138, 158, 0.08);
+  border: 1px solid rgba(45, 138, 158, 0.25);
+  border-radius: 4px;
+  color: #e0f4f5;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.footer-newsletter-input::placeholder {
+  color: rgba(122, 173, 186, 0.5);
+}
+
+.footer-newsletter-input:focus {
+  border-color: rgba(92, 189, 185, 0.6);
+  background: rgba(45, 138, 158, 0.13);
+}
+
+.footer-newsletter-btn {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, #2d8a9e 0%, #1f6a78 100%);
+  color: #e0f4f5;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.footer-newsletter-btn:hover {
+  background: linear-gradient(135deg, #3aa0b6 0%, #2d8a9e 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(45, 138, 158, 0.35);
+}
+
+.footer-newsletter-note {
+  font-size: 0.73rem;
+  color: rgba(122, 173, 186, 0.55);
+  margin-top: 0.4rem;
+}
+
+/* ——— BOTTOM BAR ——— */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(45, 138, 158, 0.12);
+  padding: 1.3rem 6vw;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(122, 173, 186, 0.55);
+}
+
+.footer-brand-name {
+  color: #2d8a9e;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-bottom-links a {
+  font-size: 0.78rem;
+  color: rgba(122, 173, 186, 0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+  color: #5cbdb9;
+}
+
+.footer-divider {
+  color: rgba(45, 138, 158, 0.35);
+  font-size: 0.78rem;
+}
+
+/* ——— LIGHT MODE ——— */
+body.light-mode .site-footer {
+  background: #0c2340;
+}
+
+body.light-mode .footer-rule {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(92, 189, 185, 0.3) 20%,
+      rgba(92, 189, 185, 0.6) 50%,
+      rgba(92, 189, 185, 0.3) 80%,
+      transparent 100%);
+}
+
+body.light-mode .footer-logo {
+  color: #ffffff;
+}
+
+body.light-mode .footer-logo span {
+  color: #5cbdb9;
+}
+
+body.light-mode .footer-tagline {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.light-mode .footer-social-link {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.light-mode .footer-social-link:hover {
+  color: #5cbdb9;
+  border-color: #5cbdb9;
+  background: rgba(92, 189, 185, 0.12);
+}
+
+body.light-mode .footer-col-title {
+  color: #5cbdb9;
+  border-bottom-color: rgba(92, 189, 185, 0.2);
+}
+
+body.light-mode .footer-nav-list li a {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.light-mode .footer-nav-list li a:hover {
+  color: #ffffff;
+}
+
+body.light-mode .footer-nav-list li a::before {
+  background: #ffffff;
+}
+
+body.light-mode .footer-newsletter-desc {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.light-mode .footer-newsletter-input {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+body.light-mode .footer-newsletter-input:focus {
+  border-color: rgba(92, 189, 185, 0.6);
+}
+
+body.light-mode .footer-newsletter-note {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode .footer-bottom-bar {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.light-mode .footer-copy {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+body.light-mode .footer-brand-name {
+  color: #5cbdb9;
+}
+
+body.light-mode .footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+body.light-mode .footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+body.light-mode .footer-divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* ——— RESPONSIVE ——— */
+@media (max-width: 1100px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .footer-tagline {
+    max-width: 300px;
+  }
+
+  .footer-newsletter-col {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 1.5rem 2.5rem;
+    gap: 2rem;
+  }
+
+  .footer-brand-col,
+  .footer-newsletter-col {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
