@@ -5,6 +5,7 @@ import { useAuthStore } from '@/store/auth.store'
 import { toast } from 'sonner'
 import authService from '@/services/auth.service'
 import { preloadAdminRoutes, preloadDashboardRoutes } from '@/utils/routePreload'
+import { redirectAfterLogin } from '@/utils/postLoginRedirect'
 
 function Login() {
   const navigate = useNavigate()
@@ -35,11 +36,11 @@ function Login() {
         // Intelligent redirect based on role
         if (result.user?.role === 'admin') {
           preloadAdminRoutes()
-          navigate('/admin', { replace: true })
+          redirectAfterLogin('/admin')
         } else {
           preloadDashboardRoutes()
           const target = from.startsWith('/admin') ? '/dashboard' : from
-          navigate(target, { replace: true })
+          redirectAfterLogin(target)
         }
       } else {
         toast.error(result.error || 'Invalid email or password')
