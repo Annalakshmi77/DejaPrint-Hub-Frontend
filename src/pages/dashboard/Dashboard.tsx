@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Package, FileText, CreditCard, Bell, ArrowRight, Clock, CheckCircle2 } from 'lucide-react'
+import { Package, FileText, CreditCard, ArrowRight, Clock, CheckCircle2, User } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -11,7 +11,6 @@ const stats = [
   { label: 'Active Orders', value: 3, icon: Package, href: '/dashboard/orders' },
   { label: 'Total Spent', value: 45230, icon: CreditCard, isCurrency: true },
   { label: 'Invoices', value: 12, icon: FileText, href: '/dashboard/invoices' },
-  { label: 'Notifications', value: 5, icon: Bell, href: '/dashboard/notifications' },
 ]
 
 const recentOrders = [
@@ -58,7 +57,7 @@ function Dashboard() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map((stat) => {
           const Icon = stat.icon
           return (
@@ -168,7 +167,7 @@ function Dashboard() {
             </Button>
             <Button variant="outline" className="h-auto flex-col gap-2 p-4" asChild>
               <Link to="/dashboard/account">
-                <Bell className="h-6 w-6" />
+                <User className="h-6 w-6" />
                 <span>Account Settings</span>
               </Link>
             </Button>

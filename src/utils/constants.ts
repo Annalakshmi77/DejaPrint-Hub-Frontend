@@ -71,7 +71,6 @@ export const DASHBOARD_NAV_ITEMS = [
   { href: '/dashboard/quotations', label: 'Quotations', icon: 'FileText' },
   { href: '/dashboard/design-upload', label: 'Upload Design', icon: 'Upload' },
   { href: '/dashboard/invoices', label: 'Invoices', icon: 'Receipt' },
-  { href: '/dashboard/notifications', label: 'Notifications', icon: 'Bell' },
   { href: '/dashboard/account', label: 'Account', icon: 'User' },
 ] as const
 

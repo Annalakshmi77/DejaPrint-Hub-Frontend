@@ -23,7 +23,6 @@ const BrowseProducts = lazy(() => import('@/pages/dashboard/BrowseProducts'))
 const Orders = lazy(() => import('@/pages/dashboard/Orders'))
 const PlaceOrder = lazy(() => import('@/pages/dashboard/PlaceOrder'))
 const Account = lazy(() => import('@/pages/dashboard/Account'))
-const Notifications = lazy(() => import('@/pages/dashboard/Notifications'))
 const OrderTracking = lazy(() => import('@/pages/dashboard/OrderTracking'))
 
 
@@ -62,8 +61,6 @@ function AppRoutes() {
             <Route path="/dashboard/orders/:orderId" element={<OrderTracking />} />
             <Route path="/dashboard/place-order/:productId" element={<PlaceOrder />} />
             <Route path="/dashboard/account" element={<Account />} />
-
-            <Route path="/dashboard/notifications" element={<Notifications />} />
           </Route>
         </Route>
 

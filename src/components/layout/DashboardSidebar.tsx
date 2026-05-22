@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom'
 import {
   Layout,
   Package,
-  Bell,
   User,
   LogOut,
   ChevronLeft,
@@ -20,7 +19,6 @@ import { prefetchRoute } from '@/utils/routePreload'
 const navItems = [
   { href: '/dashboard/designs', label: 'Designs', icon: Palette },
   { href: '/dashboard/orders', label: 'My Orders', icon: Package },
-  { href: '/dashboard/notifications', label: 'Notifications', icon: Bell },
   { href: '/dashboard/account', label: 'Profile Settings', icon: User },
 ]
 

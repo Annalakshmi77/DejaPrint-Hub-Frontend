@@ -16,7 +16,6 @@ export function preloadDashboardRoutes() {
       import('@/pages/dashboard/Orders'),
       import('@/pages/dashboard/PlaceOrder'),
       import('@/pages/dashboard/Account'),
-      import('@/pages/dashboard/Notifications'),
       import('@/pages/dashboard/OrderTracking'),
     ])
   )
@@ -39,7 +38,6 @@ const routePreloaders: Record<string, () => Promise<unknown>> = {
   '/dashboard/products': () => import('@/pages/dashboard/BrowseProducts'),
   '/dashboard/orders': () => import('@/pages/dashboard/Orders'),
   '/dashboard/account': () => import('@/pages/dashboard/Account'),
-  '/dashboard/notifications': () => import('@/pages/dashboard/Notifications'),
   '/admin': () => import('@/pages/admin/Dashboard'),
   '/admin/orders': () => import('@/pages/admin/Orders'),
   '/admin/products': () => import('@/pages/admin/Products'),

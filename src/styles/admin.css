@@ -387,23 +387,6 @@ body.light-mode .adm-brand {
   color: var(--adm-teal-lt);
 }
 
-.adm-notif-badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 18px;
-  height: 18px;
-  background: var(--adm-teal);
-  border-radius: 50%;
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--adm-bg);
-}
-
 .adm-user-btn {
   display: flex;
   align-items: center;
