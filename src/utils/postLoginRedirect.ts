@@ -1,3 +1,4 @@
+//this is Align crtion
 import { prepareDashboardShell } from './theme'
 
 /** Full navigation after login — same result as hard reload (fixes layout alignment). */
