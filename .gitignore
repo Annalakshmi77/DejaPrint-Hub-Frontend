@@ -3,3 +3,6 @@
 
 # Common ignores
 node_modules
+
+dist
+build
