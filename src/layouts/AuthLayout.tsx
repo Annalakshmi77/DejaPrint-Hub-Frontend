@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+import PageFallback from '@/components/ui/PageFallback'
 
 /**
  * AuthLayout — minimal wrapper for login, register, forgot-password, verify-otp.
@@ -17,7 +19,9 @@ function AuthLayout() {
         padding: '2rem 1rem',
       }}
     >
-      <Outlet />
+      <Suspense fallback={<PageFallback />}>
+        <Outlet />
+      </Suspense>
     </div>
   )
 }

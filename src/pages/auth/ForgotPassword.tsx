@@ -33,7 +33,7 @@ function ForgotPassword() {
     color: 'var(--paper)',
     fontSize: '0.9rem',
     outline: 'none',
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "var(--font-sans)",
     width: '100%',
     boxSizing: 'border-box' as const
   }
@@ -50,9 +50,9 @@ function ForgotPassword() {
       <div style={{ width: '100%', maxWidth: '420px' }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '2rem', textDecoration: 'none' }}>
           <div style={{ width: '40px', height: '40px', background: 'var(--gold)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
+            <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
           </div>
-          <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
+          <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
             Print<span style={{ color: 'var(--gold)' }}>Craft</span>
           </span>
         </Link>
@@ -61,7 +61,7 @@ function ForgotPassword() {
           <div style={{ marginLeft: 'auto', marginRight: 'auto', marginBottom: '1.5rem', display: 'inline-flex', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(45,138,158,0.1)', alignItems: 'center', justifyContent: 'center' }}>
             <Mail size={32} style={{ color: 'var(--gold)' }} />
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Check Your Email</h1>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Check Your Email</h1>
           <p style={{ fontSize: '0.88rem', color: 'var(--soft)', marginBottom: '1.5rem' }}>
             We've sent password reset instructions to{' '}
             <span style={{ fontWeight: 600, color: 'var(--paper)' }}>{email}</span>
@@ -74,13 +74,13 @@ function ForgotPassword() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             <button
               onClick={() => setIsSubmitted(false)}
-              style={{ background: 'none', border: '1px solid var(--auth-card-border)', borderRadius: '6px', padding: '0.75rem', color: 'var(--gold)', fontWeight: 600, fontSize: '0.88rem', cursor: 'pointer', fontFamily: "'Outfit', sans-serif" }}
+              style={{ background: 'none', border: '1px solid var(--auth-card-border)', borderRadius: '6px', padding: '0.75rem', color: 'var(--gold)', fontWeight: 600, fontSize: '0.88rem', cursor: 'pointer', fontFamily: "var(--font-sans)" }}
             >
               Try another email
             </button>
             <Link
               to="/login"
-              style={{ display: 'block', background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.75rem', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', fontFamily: "'Outfit', sans-serif" }}
+              style={{ display: 'block', background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.75rem', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', fontFamily: "var(--font-sans)" }}
             >
               Back to Sign In
             </Link>
@@ -95,16 +95,16 @@ function ForgotPassword() {
       {/* Logo */}
       <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '2rem', textDecoration: 'none' }}>
         <div style={{ width: '40px', height: '40px', background: 'var(--gold)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
+          <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
         </div>
-        <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
+        <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
           Print<span style={{ color: 'var(--gold)' }}>Craft</span>
         </span>
       </Link>
 
       <div style={{ background: 'var(--auth-card-bg)', border: '1px solid var(--auth-card-border)', borderRadius: '12px', padding: '2rem', backdropFilter: 'blur(12px)' }}>
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Forgot Password?</h1>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Forgot Password?</h1>
           <p style={{ fontSize: '0.88rem', color: 'var(--soft)' }}>Enter your email and we'll send reset instructions</p>
         </div>
 
@@ -126,7 +126,7 @@ function ForgotPassword() {
           <button
             type="submit"
             disabled={isLoading}
-            style={{ background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.8rem', fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', opacity: isLoading ? 0.7 : 1, marginTop: '0.5rem' }}
+            style={{ background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.8rem', fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', opacity: isLoading ? 0.7 : 1, marginTop: '0.5rem' }}
           >
             {isLoading && <Loader2 size={16} className="animate-spin" />}
             Send Reset Instructions

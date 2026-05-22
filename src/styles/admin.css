@@ -3,8 +3,6 @@
    Matches the navy/teal aesthetic from the Home page
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
-
 /* ——— DESIGN TOKENS ——— */
 :root {
   --adm-bg:        #060f1a;
@@ -25,8 +23,8 @@
   --adm-warning:   #e8a838;
   --adm-danger:    #e05c5c;
 
-  --adm-font:      'Outfit', system-ui, sans-serif;
-  --adm-serif:     'Playfair Display', Georgia, serif;
+  --adm-font:      var(--font-sans);
+  --adm-serif:     var(--font-serif);
 }
 
 body.light-mode {

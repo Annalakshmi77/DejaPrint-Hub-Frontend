@@ -371,7 +371,7 @@ html {
 body {
   background: var(--ink);
   color: var(--paper);
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   overflow-x: hidden;
   transition: background 0.35s, color 0.35s;
@@ -408,7 +408,7 @@ body {
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: -0.02em;
@@ -451,7 +451,7 @@ body {
   border: none;
   padding: 0.6rem 1.6rem;
   border-radius: 2px;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
@@ -470,7 +470,7 @@ body {
 .nav-signin {
   color: var(--soft);
   text-decoration: none;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -678,7 +678,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .product-label {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 0.7rem;
   color: var(--gold);
   letter-spacing: 0.1em;
@@ -737,7 +737,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .invite-text {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-style: italic;
   font-size: 0.65rem;
   color: var(--gold-light);
@@ -803,7 +803,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(3rem, 5.5vw, 5.5rem);
   font-weight: 900;
   line-height: 1.0;
@@ -896,7 +896,7 @@ body.light-mode .nav-signin:hover {
   cursor: pointer;
   transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
   text-decoration: none;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .btn-primary:hover {
@@ -917,7 +917,7 @@ body.light-mode .nav-signin:hover {
   transition: color 0.25s;
   border: none;
   background: none;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-sans);
 }
 
 .btn-secondary:hover {
@@ -1043,7 +1043,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.15;
@@ -1128,7 +1128,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .product-name {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--paper);
@@ -1220,7 +1220,7 @@ body.light-mode .nav-signin:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--gold);
@@ -1238,7 +1238,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .step-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--paper);
@@ -1299,7 +1299,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .testimonial-text {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-style: italic;
   font-size: 0.95rem;
   line-height: 1.7;
@@ -1363,7 +1363,7 @@ body.light-mode .nav-signin:hover {
 }
 
 .cta-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 900;
   line-height: 1.05;

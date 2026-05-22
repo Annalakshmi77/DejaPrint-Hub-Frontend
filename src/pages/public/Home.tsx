@@ -292,19 +292,19 @@ const Home: React.FC = () => {
       <section className="home-stats">
         <div className="home-stats-grid">
           <div className="reveal home-stat-cell">
-            <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="5000">0+</div>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="5000">0+</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Happy customers</div>
           </div>
           <div className="reveal home-stat-cell" style={{ transitionDelay: '0.1s' }}>
-            <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="12000">0+</div>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="12000">0+</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Orders fulfilled</div>
           </div>
           <div className="reveal home-stat-cell" style={{ transitionDelay: '0.2s' }}>
-            <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="98">0%</div>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="98">0%</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Satisfaction rate</div>
           </div>
           <div className="reveal home-stat-cell" style={{ transitionDelay: '0.3s' }}>
-            <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="5">0 days</div>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="5">0 days</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Average delivery</div>
           </div>
         </div>

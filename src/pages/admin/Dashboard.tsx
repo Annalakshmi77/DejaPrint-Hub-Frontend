@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { 
   Users, 
   ShoppingBag, 
@@ -27,8 +27,7 @@ import {
 const CHART_COLORS = ['#2d8a9e', '#5cbdb9', '#e8a838', '#e05c5c', '#7aadba'];
 
 export default function AdminDashboard() {
-  const [loading, setLoading] = useState(true);
-  const [stats, setStats] = useState<any>({
+  const [stats] = useState<any>({
     kpis: [
       { label: 'Total Revenue', value: '₹4,25,000', icon: TrendingUp, color: 'teal', change: '+12.5%' },
       { label: 'Active Orders', value: '156', icon: ShoppingBag, color: 'teal', change: '+8.2%' },
@@ -58,20 +57,6 @@ export default function AdminDashboard() {
       { month: 'Jun', orders: 55 },
     ]
   });
-
-  useEffect(() => {
-    // Simulate API fetch
-    setTimeout(() => setLoading(false), 800);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="adm-loading">
-        <div className="adm-spinner"></div>
-        <span>Syncing latest business metrics...</span>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-8">

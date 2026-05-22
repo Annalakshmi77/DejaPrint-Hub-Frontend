@@ -6,7 +6,7 @@
   position: relative;
   z-index: 10;
   background: #08192e;
-  font-family: 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-sans);
   overflow: hidden;
 }
 
@@ -53,7 +53,7 @@
 
 /* ——— BRAND COLUMN ——— */
 .footer-logo {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: 900;
   color: #f0f6f8;
@@ -177,7 +177,7 @@
   border: 1px solid rgba(45, 138, 158, 0.25);
   border-radius: 4px;
   color: #e0f4f5;
-  font-family: 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   outline: none;
   transition: border-color 0.2s, background 0.2s;
@@ -199,7 +199,7 @@
   color: #e0f4f5;
   border: none;
   border-radius: 4px;
-  font-family: 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;

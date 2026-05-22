@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useAuthStore } from '@/store/auth.store'
+import { prefetchRoute } from '@/utils/routePreload'
 
 
 const navItems = [
@@ -89,6 +90,8 @@ function DashboardSidebar({ collapsed, setCollapsed }: SidebarProps) {
             <Link
               key={item.href}
               to={item.href}
+              onMouseEnter={() => prefetchRoute(item.href)}
+              onFocus={() => prefetchRoute(item.href)}
               className={`adm-nav-item ${isActive ? 'active' : ''}`}
               style={{
                 justifyContent: collapsed ? 'center' : 'flex-start',

@@ -69,7 +69,7 @@ function Register() {
     color: 'var(--paper)',
     fontSize: '0.9rem',
     outline: 'none',
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "var(--font-sans)",
     width: '100%',
     boxSizing: 'border-box' as const
   }
@@ -86,16 +86,16 @@ function Register() {
       {/* Logo */}
       <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '2rem', textDecoration: 'none' }}>
         <div style={{ width: '40px', height: '40px', background: 'var(--gold)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
+          <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
         </div>
-        <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
+        <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
           Print<span style={{ color: 'var(--gold)' }}>Craft</span>
         </span>
       </Link>
 
       <div style={{ background: 'var(--auth-card-bg)', border: '1px solid var(--auth-card-border)', borderRadius: '12px', padding: '2rem', backdropFilter: 'blur(12px)' }}>
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Create Account</h1>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Create Account</h1>
           <p style={{ fontSize: '0.88rem', color: 'var(--soft)' }}>Sign up to start ordering custom prints</p>
         </div>
 
@@ -222,7 +222,7 @@ function Register() {
           <button
             type="submit"
             disabled={isLoading}
-            style={{ background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.8rem', fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', opacity: isLoading ? 0.7 : 1, marginTop: '0.5rem' }}
+            style={{ background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.8rem', fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', opacity: isLoading ? 0.7 : 1, marginTop: '0.5rem' }}
           >
             {isLoading && <Loader2 size={16} className="animate-spin" />}
             Create Account

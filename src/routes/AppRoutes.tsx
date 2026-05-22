@@ -1,12 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
-import { Suspense, lazy } from 'react'
+import { lazy } from 'react'
 import MainLayout from '@/layouts/MainLayout'
 import AuthLayout from '@/layouts/AuthLayout'
 import DashboardLayout from '@/layouts/DashboardLayout'
 import AdminLayout from '@/layouts/AdminLayout'
 import PrivateRoute from './PrivateRoute'
 import AdminRoute from './AdminRoute'
-import LoadingSpinner from '@/components/ui/LoadingSpinner'
 
 // Public pages
 const Home = lazy(() => import('@/pages/public/Home'))
@@ -39,8 +38,7 @@ const AdminAccount = lazy(() => import('@/pages/dashboard/Account'))
 
 function AppRoutes() {
   return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <Routes>
+    <Routes>
         {/* Public routes */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
@@ -81,8 +79,7 @@ function AppRoutes() {
             <Route path="/admin/account" element={<AdminAccount />} />
           </Route>
         </Route>
-      </Routes>
-    </Suspense>
+    </Routes>
   )
 }
 

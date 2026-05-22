@@ -4,6 +4,7 @@ import { Eye, EyeOff, Loader2 } from 'lucide-react'
 import { useAuthStore } from '@/store/auth.store'
 import { toast } from 'sonner'
 import authService from '@/services/auth.service'
+import { preloadAdminRoutes, preloadDashboardRoutes } from '@/utils/routePreload'
 
 function Login() {
   const navigate = useNavigate()
@@ -33,9 +34,10 @@ function Login() {
         toast.success('Welcome back!')
         // Intelligent redirect based on role
         if (result.user?.role === 'admin') {
+          preloadAdminRoutes()
           navigate('/admin', { replace: true })
         } else {
-          // If a customer was trying to go to an admin page, send them to dashboard instead
+          preloadDashboardRoutes()
           const target = from.startsWith('/admin') ? '/dashboard' : from
           navigate(target, { replace: true })
         }
@@ -54,16 +56,16 @@ function Login() {
       {/* Logo */}
       <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '2rem', textDecoration: 'none' }}>
         <div style={{ width: '40px', height: '40px', background: 'var(--gold)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
+          <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
         </div>
-        <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
+        <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
           Print<span style={{ color: 'var(--gold)' }}>Craft</span>
         </span>
       </Link>
 
       <div style={{ background: 'var(--auth-card-bg)', border: '1px solid var(--auth-card-border)', borderRadius: '12px', padding: '2rem', backdropFilter: 'blur(12px)' }}>
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Welcome Back</h1>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: '1.8rem', fontWeight: 700, color: 'var(--paper)', marginBottom: '0.4rem' }}>Welcome Back</h1>
           <p style={{ fontSize: '0.88rem', color: 'var(--soft)' }}>Sign in to your account to continue</p>
         </div>
 
@@ -78,7 +80,7 @@ function Login() {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
               autoComplete="email"
-              style={{ background: 'var(--auth-input-bg)', border: '1px solid var(--auth-input-border)', borderRadius: '6px', padding: '0.7rem 1rem', color: 'var(--paper)', fontSize: '0.9rem', outline: 'none', fontFamily: "'Outfit', sans-serif", width: '100%', boxSizing: 'border-box' }}
+              style={{ background: 'var(--auth-input-bg)', border: '1px solid var(--auth-input-border)', borderRadius: '6px', padding: '0.7rem 1rem', color: 'var(--paper)', fontSize: '0.9rem', outline: 'none', fontFamily: "var(--font-sans)", width: '100%', boxSizing: 'border-box' }}
             />
           </div>
 
@@ -96,7 +98,7 @@ function Login() {
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 required
                 autoComplete="current-password"
-                style={{ background: 'var(--auth-input-bg)', border: '1px solid var(--auth-input-border)', borderRadius: '6px', padding: '0.7rem 2.8rem 0.7rem 1rem', color: 'var(--paper)', fontSize: '0.9rem', outline: 'none', fontFamily: "'Outfit', sans-serif", width: '100%', boxSizing: 'border-box' }}
+                style={{ background: 'var(--auth-input-bg)', border: '1px solid var(--auth-input-border)', borderRadius: '6px', padding: '0.7rem 2.8rem 0.7rem 1rem', color: 'var(--paper)', fontSize: '0.9rem', outline: 'none', fontFamily: "var(--font-sans)", width: '100%', boxSizing: 'border-box' }}
               />
               <button
                 type="button"
@@ -122,7 +124,7 @@ function Login() {
           <button
             type="submit"
             disabled={isLoading}
-            style={{ background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.8rem', fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', opacity: isLoading ? 0.7 : 1, marginTop: '0.5rem' }}
+            style={{ background: 'var(--gold)', color: 'var(--ink)', border: 'none', borderRadius: '6px', padding: '0.8rem', fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.06em', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', opacity: isLoading ? 0.7 : 1, marginTop: '0.5rem' }}
           >
             {isLoading && <Loader2 size={16} className="animate-spin" />}
             Sign In
