@@ -5,40 +5,7 @@ import './Home.css';
 
 const Home: React.FC = () => {
   useEffect(() => {
-    // Activate homepage-only CSS rules
-    document.body.classList.add('home-active', 'custom-cursor-active');
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mx = e.clientX;
-      my = e.clientY;
-      if (cursor) {
-        cursor.style.left = mx + 'px';
-        cursor.style.top = my + 'px';
-      }
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-
-    let animationFrameId: number;
-    const animRing = () => {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      if (ring) {
-        ring.style.left = rx + 'px';
-        ring.style.top = ry + 'px';
-      }
-      animationFrameId = requestAnimationFrame(animRing);
-    };
-    animRing();
-
-    const interactables = document.querySelectorAll('a, button');
-    interactables.forEach(el => {
-      el.addEventListener('mouseenter', () => ring?.classList.add('hovered'));
-      el.addEventListener('mouseleave', () => ring?.classList.remove('hovered'));
-    });
+    document.body.classList.add('home-active');
 
     // Scroll reveal
     const observer = new IntersectionObserver(entries => {
@@ -105,10 +72,8 @@ const Home: React.FC = () => {
     themeToggle?.addEventListener('click', toggleTheme);
 
     return () => {
-      document.body.classList.remove('home-active', 'custom-cursor-active');
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.body.classList.remove('home-active');
       document.removeEventListener('mousemove', handleParallax);
-      cancelAnimationFrame(animationFrameId);
       themeToggle?.removeEventListener('click', toggleTheme);
       observer.disconnect();
       statsObserver.disconnect();
@@ -117,9 +82,6 @@ const Home: React.FC = () => {
 
   return (
     <div className="home-page-wrapper">
-      {/* Custom Cursor */}
-      <div className="cursor" id="cursor"></div>
-      <div className="cursor-ring" id="cursorRing"></div>
 
       {/* Navbar */}
       <nav className="site-navbar">
@@ -327,21 +289,21 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats */}
-      <section style={{ background: 'linear-gradient(135deg, #1a1410 0%, #0D0C0A 100%)', padding: '4rem 6vw' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1px', background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.1)' }}>
-          <div className="reveal" style={{ background: '#0D0C0A', padding: '2.5rem 2rem', textAlign: 'center' }}>
+      <section className="home-stats">
+        <div className="home-stats-grid">
+          <div className="reveal home-stat-cell">
             <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="5000">0+</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Happy customers</div>
           </div>
-          <div className="reveal" style={{ background: '#0D0C0A', padding: '2.5rem 2rem', textAlign: 'center', transitionDelay: '0.1s' }}>
+          <div className="reveal home-stat-cell" style={{ transitionDelay: '0.1s' }}>
             <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="12000">0+</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Orders fulfilled</div>
           </div>
-          <div className="reveal" style={{ background: '#0D0C0A', padding: '2.5rem 2rem', textAlign: 'center', transitionDelay: '0.2s' }}>
+          <div className="reveal home-stat-cell" style={{ transitionDelay: '0.2s' }}>
             <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="98">0%</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Satisfaction rate</div>
           </div>
-          <div className="reveal" style={{ background: '#0D0C0A', padding: '2.5rem 2rem', textAlign: 'center', transitionDelay: '0.3s' }}>
+          <div className="reveal home-stat-cell" style={{ transitionDelay: '0.3s' }}>
             <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '2.6rem', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.4rem' }} data-count="5">0 days</div>
             <div style={{ fontSize: '0.82rem', color: 'var(--soft)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Average delivery</div>
           </div>
