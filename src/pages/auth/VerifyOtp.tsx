@@ -75,7 +75,7 @@ function VerifyOtp() {
           <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
         </div>
         <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
-          Print<span style={{ color: 'var(--gold)' }}>Craft</span>
+          DejaPrint<span style={{ color: 'var(--gold)' }}>Hub</span>
         </span>
       </Link>
 

@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
         {/* Brand column */}
         <div className="footer-col footer-brand-col footer-animate" style={{ '--delay': '0s' } as React.CSSProperties}>
           <div className="footer-logo">
-            Print<span>Craft</span>
+            DejaPrint<span>Hub</span>
           </div>
           <p className="footer-tagline">
             Bespoke printing for diaries, calendars, notebooks &amp; invitations.
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
       {/* Bottom bar */}
       <div className="footer-bottom-bar">
         <div className="footer-bottom-inner">
-          <span className="footer-copy">© 2025 <span className="footer-brand-name">PrintCraft</span>. All rights reserved.</span>
+          <span className="footer-copy">© 2025 <span className="footer-brand-name">DejaPrint Hub</span>. All rights reserved.</span>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <span className="footer-divider">·</span>

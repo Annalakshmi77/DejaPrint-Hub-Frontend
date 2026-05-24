@@ -64,7 +64,7 @@ export default function AdminDashboard() {
       <div className="adm-page-header">
         <div className="adm-page-label">Overview</div>
         <h1 className="adm-page-title">Executive Dashboard</h1>
-        <p className="adm-page-sub">Comprehensive real-time analytics and production monitoring for PrintCraft.</p>
+        <p className="adm-page-sub">Comprehensive real-time analytics and production monitoring for DejaPrint Hub.</p>
       </div>
 
       {/* KPI Grid */}

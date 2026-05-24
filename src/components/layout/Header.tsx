@@ -41,7 +41,7 @@ function Header() {
               <span className="text-xl font-black text-primary-foreground">P</span>
             </motion.div>
             <span className="text-2xl font-black tracking-tighter group-hover:text-primary transition-colors">
-              Print<span className="text-primary">Craft</span>
+              DejaPrint<span className="text-primary">Hub</span>
             </span>
           </Link>
 

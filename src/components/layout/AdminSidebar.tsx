@@ -59,7 +59,7 @@ function AdminSidebar({ collapsed, setCollapsed }: SidebarProps) {
       <div className="adm-sidebar-logo">
         {!collapsed && (
           <Link to="/admin" className="adm-brand">
-            Print<span>Craft</span>
+            DejaPrint<span>Hub</span>
             <span className="adm-brand-badge">Admin</span>
           </Link>
         )}

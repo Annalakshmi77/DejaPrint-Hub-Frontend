@@ -761,12 +761,14 @@ body.light-mode .adm-brand {
   background: var(--adm-surface);
   border: 1px solid var(--adm-border);
   border-radius: 10px;
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .adm-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px;
 }
 
 .adm-table thead tr {

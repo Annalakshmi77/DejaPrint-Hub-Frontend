@@ -57,10 +57,10 @@ function Login() {
       {/* Logo */}
       <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '2rem', textDecoration: 'none' }}>
         <div style={{ width: '40px', height: '40px', background: 'var(--gold)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>P</span>
+          <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.2rem', color: 'var(--ink)' }}>D</span>
         </div>
         <span style={{ fontFamily: "var(--font-serif)", fontWeight: 900, fontSize: '1.5rem', color: 'var(--paper)', letterSpacing: '-0.02em' }}>
-          Print<span style={{ color: 'var(--gold)' }}>Craft</span>
+          DejaPrint<span style={{ color: 'var(--gold)' }}>Hub</span>
         </span>
       </Link>
 
@@ -134,7 +134,7 @@ function Login() {
 
         <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
           <div style={{ height: '1px', background: 'var(--auth-card-border)', marginBottom: '1rem' }} />
-          <p style={{ fontSize: '0.82rem', color: 'var(--soft)', marginBottom: '0.75rem' }}>New to PrintCraft?</p>
+          <p style={{ fontSize: '0.82rem', color: 'var(--soft)', marginBottom: '0.75rem' }}>New to DejaPrint Hub?</p>
           <Link
             to="/register"
             style={{ display: 'block', border: '1px solid var(--auth-card-border)', borderRadius: '6px', padding: '0.7rem', textAlign: 'center', color: 'var(--gold)', textDecoration: 'none', fontSize: '0.88rem', fontWeight: 600, transition: 'background 0.2s' }}

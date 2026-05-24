@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 
       {/* Navbar */}
       <nav className="site-navbar">
-        <div className="logo">Print<span>Craft</span></div>
+        <div className="logo">DejaPrint<span>Hub</span></div>
         <ul className="nav-links">
           <li><a href="#products">Products</a></li>
           <li><a href="#process">How it works</a></li>
