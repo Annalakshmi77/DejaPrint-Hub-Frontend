@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter column */}
-        <div className="footer-col footer-newsletter-col footer-animate" style={{ '--delay': '0.32s' } as React.CSSProperties}>
+        {/* <div className="footer-col footer-newsletter-col footer-animate" style={{ '--delay': '0.32s' } as React.CSSProperties}>
           <h4 className="footer-col-title">Stay Inspired</h4>
           <p className="footer-newsletter-desc">
             Get design tips, new product launches, and exclusive offers in your inbox.
@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
             </button>
           </form>
           <p className="footer-newsletter-note">No spam. Unsubscribe anytime.</p>
-        </div>
+        </div> */}
 
       </div>
 

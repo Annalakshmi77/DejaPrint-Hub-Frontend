@@ -369,7 +369,6 @@ const Home: React.FC = () => {
           <p className="cta-sub">Tell us your idea. We'll design it, print it, and deliver it — exactly as you imagined.</p>
           <div className="cta-actions">
             <Link to="/register" className="btn-primary">Start your order ✦</Link>
-            <Link to="/contact" className="btn-secondary">Talk to a designer <span className="btn-arrow">→</span></Link>
           </div>
 
         </div>
